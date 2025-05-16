@@ -13,7 +13,7 @@ func main() {
 
 	r := gin.Default()
 	r.GET("/products", api.GetProducts)
-	r.POST("/checkout", api.CreateCheckout)
+	// TODO r.POST("/checkout", api.CreateCheckout)
 	// TODO r.POST("/stripe-webhook", api.HandleStripeWebhook)
 
 	log.Println("Server running at http://localhost:8080")
