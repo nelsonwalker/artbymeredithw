@@ -27,9 +27,6 @@ export default function About() {
 				</div>
 
 				<div>
-					<h1 className="text-5xl font-bold mb-6 text-white-400">
-						About
-					</h1>
 					<p className="text-md leading-7 mb-4">
 						Hello, I’m Meredith. I’m an Australian artist whose work
 						explores emotion, identity, and organic forms across a
