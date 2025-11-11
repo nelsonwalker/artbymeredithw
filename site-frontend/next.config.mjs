@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+	images: {
+		remotePatterns: [
+			new URL("https://storage.googleapis.com/artbymeredithw/*"),
+		],
+	},
+};
 
 export default nextConfig;

@@ -31,7 +31,7 @@ func main() {
 	r.GET("/products/:id", api.GetProductByID)
 	r.POST("/create-payment-intent", api.CreatePaymentIntent)
 	// TODO r.POST("/checkout", api.CreateCheckout)
-	// TODO r.POST("/stripe-webhook", api.HandleStripeWebhook)
+	r.POST("/stripe-webhook", api.HandleStripeWebhook)
 
 	log.Println("Server running at http://localhost:8080")
 	r.Run(":8080")

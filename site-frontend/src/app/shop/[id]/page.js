@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { Header } from "@/app/components/Header";
 import { Footer } from "@/app/components/Footer";
+import Image from "next/image";
 
 export default function ProductDetailPage() {
 	const { id } = useParams();
@@ -40,10 +41,11 @@ export default function ProductDetailPage() {
 			<main className="max-w-5xl mx-auto p-6">
 				<div className="flex flex-col md:flex-row gap-8 items-start">
 					<div className="w-full md:w-1/2">
-						<img // TODO: display image based on image URL
-							// src={product.image_url}
-							src={"/gallery/img" + product.id + ".jpg"}
+						<Image
+							src={product.image_url}
 							alt={product.name}
+							width={600}
+							height={800}
 							className="w-full h-auto rounded-md"
 						/>
 					</div>
@@ -66,9 +68,13 @@ export default function ProductDetailPage() {
 					</div>
 				</div>
 				{showBanner && (
-					<div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded shadow-lg flex items-center space-x-2">
-						<span>✅</span>
-						<span>Item added to cart</span>
+					<div className="fixed bottom-6 left-1/2 -translate-x-1/2 animate-slide-up bg-green-600/90 backdrop-blur-md text-white px-6 py-4 rounded-2xl shadow-lg flex items-center gap-3 border border-green-400/50">
+						<div className="flex items-center justify-center w-6 h-6 bg-white/20 rounded-full">
+							<span className="text-lg">✓</span>
+						</div>
+						<span className="font-medium tracking-wide">
+							Item added to cart
+						</span>
 					</div>
 				)}
 			</main>

@@ -5,6 +5,7 @@ import { Header } from "@/app/components/Header";
 import { Footer } from "@/app/components/Footer";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Shop() {
 	const [products, setProducts] = useState([]);
@@ -30,10 +31,11 @@ export default function Shop() {
 							href={`/shop/${product.id}`}
 							className="block border rounded-xl p-4 shadow hover:shadow-lg"
 						>
-							<img // TODO: display image based on image URL
-								// src={product.image_url}
-								src={"/gallery/img" + product.id + ".jpg"}
+							<Image
+								src={product.image_url}
 								alt={product.name}
+								width={600}
+								height={800}
 								className="w-full h-48 object-cover rounded-md mb-4"
 							/>
 							<h2 className="text-xl font-semibold">

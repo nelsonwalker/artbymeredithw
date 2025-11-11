@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image";
 import { useEffect, useState } from 'react'
 import { Header } from '@/app/components/Header'
 import { Footer } from '@/app/components/Footer'
@@ -39,6 +40,13 @@ export default function CartPage() {
                 <li key={item.id} className="flex items-center justify-between border-b pb-4">
                   <div className="flex items-center gap-4">
                     <img src={item.image_url} alt={item.name} className="w-20 h-20 object-cover rounded" />
+                    {/* <Image
+                      src={item.image_url}
+                      alt={item.name}
+                      width={20}
+                      height={20}
+                      className="object-cover"
+                    /> */}
                     <div>
                       <h2 className="font-semibold text-lg">{item.name}</h2>
                       <p className="text-gray-600">${(item.price_cents / 100).toFixed(2)} AUD</p>
