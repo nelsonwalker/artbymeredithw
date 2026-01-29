@@ -1,5 +1,8 @@
 # Art By MeredithW
 
+<img width="1910" height="1080" alt="artbymeredithw-website" src="https://github.com/user-attachments/assets/1866674d-b30b-4982-9ec5-8ca9ff85786c" />
+
+
 - site for my sister to sell her artwork
 - WIP
 - waiting for:
