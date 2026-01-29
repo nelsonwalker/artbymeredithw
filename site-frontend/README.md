@@ -1,3 +1,11 @@
+# Art By MeredithW
+
+- site for my sister to sell her artwork
+- WIP
+- waiting for:
+  - her to create an ABN to complete stripe integration
+  - her to finalise photos, product list, couple other design choices
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
